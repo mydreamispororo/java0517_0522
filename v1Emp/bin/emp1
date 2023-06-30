@@ -1,0 +1,25 @@
+use employees;
+
+create table emp(
+emp_id int not null auto_increment, -- pk
+emp_name varchar(20),
+emp_salary int,
+emp_group varchar(20), -- 부서명
+emp_regdate date,
+primary key(emp_id)
+);
+
+desc emp;
+
+insert into emp(emp_name, emp_salary, emp_group, emp_regdate) values('홍길동', 200000, '인사과', '2022-01-30');
+insert into emp(emp_name, emp_salary, emp_group, emp_regdate) values('김철수', 250000, '총무과', '2021-12-30');
+insert into emp(emp_name, emp_salary, emp_group, emp_regdate) values('안영희', 430000, '자재과', '2021-07-30');
+insert into emp(emp_name, emp_salary, emp_group, emp_regdate) values('이진수', 500000, '설계과', '2023-02-28');
+insert into emp(emp_name, emp_salary, emp_group, emp_regdate) values('김리아', 300000, '비서과', '2023-04-30');
+insert into emp(emp_name, emp_salary, emp_group, emp_regdate) values('마동석', 300000, '자재과', '2023-01-24');
+insert into emp(emp_name, emp_salary, emp_group, emp_regdate) values('김동석', 300000, '설계과', '2022-12-01');
+
+
+
+select count(*) from emp;
+select count(*) as total from emp;

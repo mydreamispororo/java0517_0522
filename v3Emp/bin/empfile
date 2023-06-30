@@ -1,0 +1,25 @@
+use employees;
+
+
+
+
+unique : 중복된 값은 x
+create table emp(
+emp_id int not null unique,
+emp_pwd varchar(20),
+emp_buseo_code varchar(20)
+);
+
+desc emp;
+
+create table buseo(
+emp_buseo_code varchar(10),
+emp_buseo_name varchar(20)
+);
+
+
+--auto increment
+insert into buseo values('K100', '인사과');
+insert into buseo values('K200', '자재과');
+insert into buseo values('K300', '영업부');
+insert into buseo values('K400', '비서실');
